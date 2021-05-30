@@ -1,0 +1,23 @@
+{
+  "name": "jimhinson",
+  "version": "1.0.0",
+  "description": "Relias coding challenge",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^7.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimHinson/relias.git"
+  },
+  "author": "Jim Hinson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JimHinson/relias/issues"
+  },
+  "homepage": "https://github.com/JimHinson/relias#readme"
+}
