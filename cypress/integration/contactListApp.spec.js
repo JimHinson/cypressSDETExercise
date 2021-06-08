@@ -3,41 +3,40 @@ const { describe } = require("mocha");
 import { it } from "mocha";
 
 const testURL = 'https://thinking-tester-contact-list.herokuapp.com/';
+const firstName = "George";
+const lastName = "Jetson";
+const email = "george.jetson@thejetsons.com"
+const pwd = "password";
 
 describe('Sign up', () => {
+    var userData;
     //tests should not depend on each other
     //instead, create the data in before()
-    //this will skip the other tests which would fail anyway
-    before( () => {
-        cy.createUser('A', 'valid', 'user@user.com', 'password');
-        //ignore any errors
-        // cy.get('[id=error]').should('not.exist'); //duplicate email error
-    })});
-
-    it.skip('Test Create Valid User', () => {
-        cy.createUser('James',  'Bond', 'jim.bond@bond.com', 'JamesBond1');
-        cy.get('[id=error]').should('not.exist'); //duplicate email error
-
-        // cy.get('[id=error]').contains('User validation failed: email: Email is invalid, password: Path `password` is required.');
-        //TODO: Do we want to check all validations?
-        // User validation failed: email: Email is invalid, password: Path `password` is required.
-    });
+    before( function() { 
+        cy.createUser(firstName, lastName, email, pwd);   
+        //ignore error if user already exists
+    })              
     
+
+    it('Test Create Valid Unique User', () => {
+        var tempMail = 'jim.bond' + Date.now ().toString () + '@bond.com';
+        cy.createUser('James',  'Bond', tempMail, 'JamesBond1');
+        cy.get('[id=error]').should('not.exist'); //duplicate email error
+    });
+   
     it('Test create invalid user', () =>{
         cy.visit(testURL);
         cy.createUser('George', 'Jetson', 'a', 'b');
-        // cy.get('[]');
+        cy.get('[id=error]').contains('User validation failed: email: Email is invalid, password: Path `password` (`b`) is shorter than the minimum allowed length (7).');
     });
 
-
-describe.skip('Log in', () => {
     it('Should log in', () => {
         cy.visit(testURL);
-        cy.login('user@user.com', 'password');
+        cy.login(email, pwd);
         cy.get('[id=error]').should('not.exist'); //duplicate email error
-
     })
 })
+
 
 describe('Contact Creation', () => {
     before("Log in once to save time", () => {
@@ -47,11 +46,6 @@ describe('Contact Creation', () => {
     })
 
     it('Should create contact', ()  => {
-        // cy.visit(testURL);
-        // cy.login('user@user.com', 'password');
-        // cy.checkForError();
-        cy.get('[id=error]')
-        .should('not.exist');
         cy.get('[id=add-contact]').click();
         cy.get('[id=submit]').click();
         cy.get('[id=error]').should('exist');
@@ -60,6 +54,11 @@ describe('Contact Creation', () => {
         cy.get('[id=submit]').click();
         cy.get('[id=error]').should('not.exist');
         cy.get('[id=myTable]').contains('First Last');
+        cy.get('[id=error]')
+            .should('not.exist');
+    })
+    after("log out", ()=> {
+        cy.get(['#logout']).click;
     })
     
 })
