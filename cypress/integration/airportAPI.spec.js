@@ -41,15 +41,6 @@ describe('Testing the AirplaneAPI App', () => {
     );
 
 
-    /*
-curl -X POST -d "from=KIX&to=NRT" https://airportgap.dev-tester.com/api/airports/distance
-{"data":{"id":"KIX-NRT","type":"airport_distance","attributes":{"from_airport":{"id":3158,"name":"Kansai International Airport","city":"Osaka",
-"country":"Japan","iata":"KIX","icao":"RJBB","latitude":"34.427299","longitude":"135.244003","altitude":26,"timezone":"Asia/Tokyo"},
-"to_airport":{"id":1721,"name":"Narita International Airport","city":"Tokyo","country":"Japan","iata":"NRT","icao":"RJAA","latitude":"35.764702",
-"longitude":"140.386002","ajhinson@Wolfpack:~$
-
-
-    */
 
     //https://airportgap.dev-tester.com/api/airports/distance
     it.skip('POST Get distance', () => {
@@ -86,7 +77,7 @@ curl -X POST -d "from=KIX&to=NRT" https://airportgap.dev-tester.com/api/airports
 
     )
     
-    it('DELETE favorite', () => {
+    it.skip('DELETE favorite', () => {
         var testFavorites = testURL + "/airports/distance";
         const headers = authorization + " -dfrom=GOH&to=NRT"
         const options = {
