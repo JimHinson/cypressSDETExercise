@@ -1,0 +1,18 @@
+{
+    "users": [
+      {        
+        "firstName": "Krish",
+        "lastName": "Lee",
+        "phoneNumber": "123456",
+        "password": "123456",
+        "emailAddress": "krish.lee@learningcontainer.com"
+      },
+      {
+        "firstName": "racks",
+        "lastName": "jacson",
+        "phoneNumber": "123456",
+        "password": "123456",
+        "emailAddress": "racks.jacson@learningcontainer.com"
+      }
+    ]
+    }
