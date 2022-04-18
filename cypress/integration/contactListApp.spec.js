@@ -1,4 +1,5 @@
 const { describe } = require("mocha");
+// const requiredProperties = req
 
 import { it } from "mocha";
 
@@ -16,12 +17,20 @@ describe('Sign up', () => {
         cy.createUser(firstName, lastName, email, pwd);   
         //ignore error if user already exists
     })              
+
+    it.only('Skip login page', () => {
+        cy.intercept({
+            url: '*herokuapp.com',
+        },
+        [
+        ])
+    })
     
 
     it('Test Create Valid Unique User', () => {
         var tempMail = 'jim.bond' + Date.now ().toString () + '@bond.com';
         cy.createUser('James',  'Bond', tempMail, 'JamesBond1');
-        cy.get('[id=error]').should('not.exist'); //duplicate email error
+        cy.get('[id=error]').should('not.exist');
     });
    
     it('Test create invalid user', () =>{

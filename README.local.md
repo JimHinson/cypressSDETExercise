@@ -1,6 +1,6 @@
-# relias
+# SDET
 
-Cypres UI Testing
+Cypress UI Testing
 /cypress-io/cypress-realworld-app
 * store uid/pwd in properties file not in git
 * use fixtures for test users?

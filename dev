@@ -1,0 +1,99 @@
+{
+  "body": {
+    "data": {
+      "id": "MAG",
+      "type": "airport",
+      "attributes": {
+        "name": "Madang Airport",
+        "city": "Madang",
+        "country": "Papua New Guinea",
+        "iata": "MAG",
+        "icao": "AYMD",
+        "latitude": "-5.20708",
+        "longitude": "145.789001",
+        "altitude": 20,
+        "timezone": "Pacific/Port_Moresby"
+      }
+    }
+  },
+  "headers": {
+    "date": "Sat, 05 Jun 2021 16:57:38 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "transfer-encoding": "chunked",
+    "connection": "keep-alive",
+    "vary": "Accept-Encoding, Accept",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "1; mode=block",
+    "x-content-type-options": "nosniff",
+    "x-download-options": "noopen",
+    "x-permitted-cross-domain-policies": "none",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "etag": "W/\"7736a1edd0fd7f60f0fe0a339bdc5f91\"",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "x-request-id": "6400f212-30fa-4e42-8903-115eb12acdcc",
+    "x-runtime": "0.016733",
+    "strict-transport-security": "max-age=63072000; includeSubDomains, max-age=15724800; includeSubdomains",
+    "content-encoding": "gzip",
+    "cf-cache-status": "DYNAMIC",
+    "cf-request-id": "0a7eb4ea2e0000e3bea6aad000000001",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v2?s=8G5GEKrdLo24Pm9XOOtTBxnbu0QXc0oXJi6OeaN5eDIkhrEGmooZLb7A5u3AsC4QKk73H%2Fz%2FkzgW8zjTq6zc6hAntLRsqYjpZFuH0VwogsjQmMxme03EF45UntpedL8dRpwCD7Waeg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+    "nel": "{\"report_to\":\"cf-nel\",\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "65aaf0f04e9fe3be-ATL",
+    "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400, h3=\":443\"; ma=86400"
+  },
+  "status": 200,
+  "statusText": "OK",
+  "isOkStatusCode": true,
+  "requestHeaders": {
+    "Connection": "keep-alive",
+    "authorization": "bearer wT1TBoFyMNg2aryNbYoowFjc",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36",
+    "accept": "*/*",
+    "accept-encoding": "gzip, deflate"
+  },
+  "duration": 120,
+  "allRequestResponses": [
+    {
+      "Request Body": null,
+      "Request Headers": {
+        "Connection": "keep-alive",
+        "authorization": "bearer wT1TBoFyMNg2aryNbYoowFjc",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36",
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate"
+      },
+      "Request URL": "https://airportgap.dev-tester.com/api/airports/MAG",
+      "Response Body": "{\"data\":{\"id\":\"MAG\",\"type\":\"airport\",\"attributes\":{\"name\":\"Madang Airport\",\"city\":\"Madang\",\"country\":\"Papua New Guinea\",\"iata\":\"MAG\",\"icao\":\"AYMD\",\"latitude\":\"-5.20708\",\"longitude\":\"145.789001\",\"altitude\":20,\"timezone\":\"Pacific/Port_Moresby\"}}}",
+      "Response Headers": {
+        "date": "Sat, 05 Jun 2021 16:57:38 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "transfer-encoding": "chunked",
+        "connection": "keep-alive",
+        "vary": "Accept-Encoding, Accept",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "1; mode=block",
+        "x-content-type-options": "nosniff",
+        "x-download-options": "noopen",
+        "x-permitted-cross-domain-policies": "none",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "etag": "W/\"7736a1edd0fd7f60f0fe0a339bdc5f91\"",
+        "cache-control": "max-age=0, private, must-revalidate",
+        "x-request-id": "6400f212-30fa-4e42-8903-115eb12acdcc",
+        "x-runtime": "0.016733",
+        "strict-transport-security": "max-age=63072000; includeSubDomains, max-age=15724800; includeSubdomains",
+        "content-encoding": "gzip",
+        "cf-cache-status": "DYNAMIC",
+        "cf-request-id": "0a7eb4ea2e0000e3bea6aad000000001",
+        "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v2?s=8G5GEKrdLo24Pm9XOOtTBxnbu0QXc0oXJi6OeaN5eDIkhrEGmooZLb7A5u3AsC4QKk73H%2Fz%2FkzgW8zjTq6zc6hAntLRsqYjpZFuH0VwogsjQmMxme03EF45UntpedL8dRpwCD7Waeg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+        "nel": "{\"report_to\":\"cf-nel\",\"max_age\":604800}",
+        "server": "cloudflare",
+        "cf-ray": "65aaf0f04e9fe3be-ATL",
+        "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400, h3=\":443\"; ma=86400"
+      },
+      "Response Status": 200
+    }
+  ]
+}

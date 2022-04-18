@@ -19,4 +19,11 @@
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
+
+  on('before:browser:launch', (browser = {}, launchOptions) => {
+    launchOptions.args.push('--another-arg')
+
+
+  })
+  
 }

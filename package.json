@@ -4,12 +4,13 @@
   "description": "Relias coding challenge",
   "main": "index.js",
   "devDependencies": {
-    "cypress": "^7.4.0",
+    "cypress": "^7.5.0",
     "mocha": "^8.4.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress": "./node_modules/.bin/cypress open"
+    "cypress": "./node_modules/.bin/cypress open",
+    "cypr": "cross-env CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress open"
   },
   "repository": {
     "type": "git",
@@ -58,6 +59,7 @@
     "common-tags": "^1.8.0",
     "concat-map": "^0.0.1",
     "core-util-is": "^1.0.2",
+    "cross-env": "^7.0.3",
     "cross-spawn": "^7.0.3",
     "dashdash": "^1.14.1",
     "date-fns": "^1.30.1",
