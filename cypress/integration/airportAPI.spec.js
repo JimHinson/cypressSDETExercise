@@ -1,5 +1,5 @@
-const myToken = 'iBytKTc4KaiRmBcTs7soSxus';
-const token = "iBytKTc4KaiRmBcTs7soSxus";
+// const myToken = 'iBytKTc4KaiRmBcTs7soSxus';
+const token = "xPqTCmVvgJgBvYyspUnTg4si";
 const authorization = `bearer ${ token }`;
 
 const { describe } = require("mocha");
@@ -8,7 +8,7 @@ import { it } from "mocha";
 
 const testURL = 'https://airportgap.dev-tester.com/api';
                  //'https://airportgap.dev-tester.com/api'
-const requestHeader = "Authorization: Bearer token=iBytKTc4KaiRmBcTs7soSxus";
+// const requestHeader = "Authorization: Bearer token=iBytKTc4KaiRmBcTs7soSxus";
 
 describe('Testing the AirplaneAPI App', () => {
 
@@ -20,13 +20,14 @@ describe('Testing the AirplaneAPI App', () => {
         var testFavorites = testURL + "/favorites";
         const options = {
             method: 'GET',
+                //   https://airportgap.dev-tester.com/api/airports/MAG
             url: 'https://airportgap.dev-tester.com/api/airports/MAG',
             headers: {
-                authorization,
+                Authorization: "Bearer token=xPqTCmVvgJgBvYyspUnTg4si",
             },
             // log: true
             };
-            cy.request(options).then((response) => {
+            cy.request(options, setTimeout=100000).then((response) => {
                 cy.expect(response.status).to.eq(200)
                 cy.expect(response).to.have.property('headers');
                 cy.expect(response).to.have.property('body')
