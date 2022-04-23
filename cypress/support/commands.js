@@ -32,6 +32,17 @@ Cypress.Commands.add('createUser', (firstName, lastName, email, password) => {
     cy.get('[id=password]').type(password);
     cy.get('[id=submit]').click();
 });
+/*
+
+*/
+Cypress.Commands.add('createContact', ()  => {
+    cy.get('[id=add-contact]').click();
+    cy.get('[id=submit]').click();
+    cy.get('[id=error]').should('exist');
+    cy.get('[id=firstName]').type('First');
+    cy.get('[id=lastName]').type('Last');
+    cy.get('[id=submit]').click();
+});
 
 Cypress.Commands.add('login', (email, password) => {
     cy.visit('https://thinking-tester-contact-list.herokuapp.com/');

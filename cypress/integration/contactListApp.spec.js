@@ -18,7 +18,7 @@ describe('Sign up', () => {
         //ignore error if user already exists
     })              
 
-    it.only('Skip login page', () => {
+    it('Skip login page', () => {
         cy.intercept({
             url: '*herokuapp.com',
         },
@@ -54,17 +54,24 @@ describe('Contact Creation', () => {
         cy.get('[id=error]').should('not.exist');
     })
 
+    function myFunction()  {
+        console.log('my function');
+    }
+    
     it('Should create contact', ()  => {
-        cy.get('[id=add-contact]').click();
-        cy.get('[id=submit]').click();
-        cy.get('[id=error]').should('exist');
-        cy.get('[id=firstName]').type('First');
-        cy.get('[id=lastName]').type('Last');
-        cy.get('[id=submit]').click();
+        // cy.createContact();
+        cy.createContact();
         cy.get('[id=error]').should('not.exist');
         cy.get('[id=myTable]').contains('First Last');
         cy.get('[id=error]')
             .should('not.exist');
+    })
+
+    it('Should not allow duplicates', () => {
+        cy.createContact('George', 'Jetson');
+        cy.createContact();
+        cy.get('[id=error]')
+            .should('exist');
     })
     after("log out", ()=> {
         cy.get(['#logout']).click;
